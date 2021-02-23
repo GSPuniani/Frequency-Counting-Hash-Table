@@ -50,8 +50,14 @@ class HashTable:
     new_data = (key, value)
     arr_index = self.hash_func(key)
     ll = self.arr[arr_index]
-    ll.append(new_data)
 
+    ll_index = ll.find(key)
+    # Only append if the word does not already exist in the table
+    if ll_index == -1:
+      ll.append(new_data)
+    # If the word does exist in the table, then increment its value by 1
+    else:
+      # Call update() method on LinkedList
 
   # 4️⃣ TODO: Complete the print_key_values method.
 
@@ -65,7 +71,9 @@ class HashTable:
   # erase: 2
 
   def print_key_values(self):
-    pass
-
+    for ll in self.arr:
+      ll.print_nodes()
+    # Change print_nodes() method in LinkedList.py to be reformatted
+    # Do not print anything if linked list is empty
 
 

@@ -12,7 +12,7 @@ class LinkedList:
     self.head = new_node
 
 
-  def find(self,item):
+  def find(self, item):
 
     current = self.head
 
@@ -32,6 +32,8 @@ class LinkedList:
     else:
       return -1
 
+  def update(self, item):
+    # Could use find() method 
 
 
   def length(self):
