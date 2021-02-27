@@ -7,8 +7,6 @@ class HashTable:
     self.arr = self.create_arr(size)
 
 
-  # 1️⃣ TODO: Complete the create_arr method.
-
   # Each element of the hash table (arr) is a linked list.
   # This method creates an array (list) of a given size and populates each of its elements with a LinkedList object.
 
@@ -25,10 +23,6 @@ class HashTable:
       
 
 
-
-
-  # 2️⃣ TODO: Create your own hash function.
-
   # Hash functions are a function that turns each of these keys into an index value that we can use to decide where in our list each key:value pair should be stored. 
 
   def hash_func(self, key):
@@ -37,10 +31,17 @@ class HashTable:
     '''
     index = 0
     vowels = ["a", "e", "i", "o", "u"]
+    # Iterate through the key
     for char in key:
+      # If the character is not a vowel, then increment the index by 1
       if char not in vowels:
         index += 1
+      # If the character is the letter 'y' and it is third letter after two consonants, then it is probably not a consonant
+      if index == 2 and char == 'y':
+        index -= 1
+    # Return the index modulo array length
     return index % self.arr.count
+
 
   # 3️⃣ TODO: Complete the insert method.
 
