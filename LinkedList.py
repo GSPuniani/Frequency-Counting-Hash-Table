@@ -20,7 +20,6 @@ class LinkedList:
     counter = 0
 
     while current != None and not found:
-      # if current.data == item: if item is not tuple of key and value
       if item in current.data.keys():
         found = True
       else:
@@ -46,7 +45,7 @@ class LinkedList:
       current = current.next
       i += 1
 
-    # Increment the value by 1 
+    # Increment the value at that key by 1 
     current.data[item] += 1
 
 
@@ -63,9 +62,11 @@ class LinkedList:
 
 
   def print_nodes(self):
+    # Iterate through each linked list
     current = self.head
 
     for i in range(self.length()):
+      # Print the key-value pairs in each linked list
       keys_list = current.data.keys()
       for key in keys_list:
         print(f'{key}: {current.data[key]}')

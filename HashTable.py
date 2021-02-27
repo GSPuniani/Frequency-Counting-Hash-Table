@@ -8,9 +8,9 @@ class HashTable:
 
 
   # Each element of the hash table (arr) is a linked list.
-  # This method creates an array (list) of a given size and populates each of its elements with a LinkedList object.
 
   def create_arr(self, size):
+    """Creates an array (list) of a given size and populates each of its elements with a LinkedList object"""
     # Create an empty array
     arr = []
     
@@ -43,11 +43,14 @@ class HashTable:
     return index % self.size
 
 
-  # 3️⃣ TODO: Complete the insert method.
 
-  # Should insert a key value pair into the hash table, where the key is the word and the value is a counter for the number of times the word appeared. When inserting a new word in the hash table, be sure to check if there is a Node with the same key in the table already.
+  # Insert a key value pair into the hash table, where the key is the word and the value is a counter for the number of times the word appeared
 
   def insert(self, key, value):
+    """
+    Adds a new dictionary to the appropriate linked list for each key-value pair, 
+    or increments the value in an existing pair by 1.
+    """
     new_data = {key: value}
     arr_index = self.hash_func(key)
     ll = self.arr[arr_index]
@@ -60,21 +63,13 @@ class HashTable:
     else:
       ll.update(key, ll_index)
 
-  # 4️⃣ TODO: Complete the print_key_values method.
-
+ 
   # Traverse through the every Linked List in the table and print the key value pairs.
 
-  # For example: 
-  # a: 1
-  # again: 1
-  # and: 1
-  # blooms: 1
-  # erase: 2
-
   def print_key_values(self):
+    """Prints each key-value pair in each linked list of the array."""
     for ll in self.arr:
       ll.print_nodes()
-    # Change print_nodes() method in LinkedList.py to be reformatted
-    # Do not print anything if linked list is empty
+
 
 
