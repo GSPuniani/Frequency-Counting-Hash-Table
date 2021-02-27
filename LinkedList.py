@@ -21,7 +21,7 @@ class LinkedList:
 
     while current != None and not found:
       # if current.data == item: if item is not tuple of key and value
-      if current.data == item:
+      if item in current.data.keys():
         found = True
       else:
         current = current.next
@@ -66,5 +66,7 @@ class LinkedList:
     current = self.head
 
     for i in range(self.length()):
-      print(f'{current.data}: {current.data}')
+      keys_list = current.data.keys()
+      for key in keys_list:
+        print(f'{key}: {current.data[key]}')
       current = current.next

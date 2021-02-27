@@ -13,12 +13,12 @@ A poppy blooms.`
 
 would generate this output:
 `a: 1
-again: 1
-and: 1
-blooms: 1
-erase: 2
 i: 1
-poppy: 1
-rewrite: 1
+and: 1
+again: 1
+erase: 2
 then: 1
-write: 1`
+write: 1
+blooms: 1
+poppy: 1
+rewrite: 1`
