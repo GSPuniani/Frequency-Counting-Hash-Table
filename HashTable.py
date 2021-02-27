@@ -40,7 +40,7 @@ class HashTable:
       if index == 2 and char == 'y':
         index -= 1
     # Return the index modulo array length
-    return index % self.arr.count
+    return index % self.size
 
 
   # 3️⃣ TODO: Complete the insert method.
@@ -48,7 +48,7 @@ class HashTable:
   # Should insert a key value pair into the hash table, where the key is the word and the value is a counter for the number of times the word appeared. When inserting a new word in the hash table, be sure to check if there is a Node with the same key in the table already.
 
   def insert(self, key, value):
-    new_data = (key, value)
+    new_data = {key: value}
     arr_index = self.hash_func(key)
     ll = self.arr[arr_index]
 
@@ -58,7 +58,7 @@ class HashTable:
       ll.append(new_data)
     # If the word does exist in the table, then increment its value by 1
     else:
-      # Call update() method on LinkedList
+      ll.update(key, ll_index)
 
   # 4️⃣ TODO: Complete the print_key_values method.
 
