@@ -7,18 +7,18 @@ This project uses a hash table to implement a word-frequency counting program. M
 
 For example, a text file that contains these lines:
 
-`I write, erase, rewrite
-Erase again, and then
-A poppy blooms.`
+`I write, erase, rewrite`
+`Erase again, and then`
+`A poppy blooms.`
 
 would generate this output:
-`a: 1
-i: 1
-and: 1
-again: 1
-erase: 2
-then: 1
-write: 1
-blooms: 1
-poppy: 1
-rewrite: 1`
+`a: 1`
+`i: 1`
+`and: 1`
+`again: 1`
+`erase: 2`
+`then: 1`
+`write: 1`
+`blooms: 1`
+`poppy: 1`
+`rewrite: 1`
